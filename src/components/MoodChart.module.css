@@ -1,0 +1,267 @@
+.moodChartContainer {
+  padding: 16px;
+  max-width: 100%;
+}
+
+.moodChartCard {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.chartHeader {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #e8d4f0;
+  padding-bottom: 16px;
+}
+
+.chartHeader h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.yearNav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.yearNavBtn {
+  background: #f0e6f5;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #7b1fa2;
+}
+
+.yearNavBtn:hover {
+  background: #7b1fa2;
+  color: white;
+}
+
+.chartWrapper {
+  overflow-x: auto;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.moodTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  table-layout: fixed;
+}
+
+.moodTable th,
+.moodTable td {
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dayHeader {
+  width: 30px;
+  background: #f5f0f7;
+}
+
+.monthHeader {
+  padding: 10px 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  background: #f5f0f7;
+  min-width: 45px;
+}
+
+.dayLabel {
+  font-size: 12px;
+  color: #666;
+  padding: 4px 8px;
+  font-weight: 500;
+  background: #f5f0f7;
+  width: 30px;
+}
+
+.moodCell {
+  width: 45px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px;
+  transition: all 0.15s ease;
+  background: #f9f9f9;
+}
+
+.moodCell.hasMood {
+  cursor: pointer;
+}
+
+.moodCell.hasMood:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.moodCell.invalid {
+  background: #1a1a1a !important;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #666;
+  font-size: 16px;
+}
+
+.legendSection {
+  background: #faf5fc;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.legendSection h3 {
+  color: #333;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.legendGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+@media (min-width: 600px) {
+  .legendGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendColor {
+  min-width: 32px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.legendLabel {
+  font-size: 12px;
+  color: #555;
+}
+
+.statsSection {
+  margin-bottom: 16px;
+}
+
+.statsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.statsTable th {
+  background: #f5f0f7;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.statsTable td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+}
+
+.statsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.statsMoodBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.statsDays {
+  font-weight: 600;
+  color: #333;
+  font-family: monospace;
+}
+
+.statsPercent {
+  width: 60%;
+}
+
+.percentBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 4px 8px;
+  min-width: 120px;
+}
+
+.percentBar {
+  height: 16px;
+  border-radius: 2px;
+  min-width: 2px;
+}
+
+.percentBarContainer span {
+  font-size: 12px;
+  color: #666;
+  min-width: 50px;
+  text-align: right;
+}
+
+.totalSection {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  padding: 14px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f3e5f5 100%);
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.totalSection strong {
+  color: #2e7d32;
+  font-size: 16px;
+}

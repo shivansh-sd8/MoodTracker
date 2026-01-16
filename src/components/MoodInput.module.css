@@ -1,0 +1,146 @@
+.moodInputContainer {
+  padding: 16px;
+  max-width: 100%;
+}
+
+.moodInputCard {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.moodHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.moodHeader h2 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.moodDate {
+  color: #666;
+  font-size: 14px;
+  background: #f5f5f5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.moodOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  .moodOptions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.moodOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 4px;
+}
+
+.moodOption:hover {
+  border-color: var(--mood-color);
+  background: var(--mood-bg);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.moodOption.selected {
+  border-color: var(--mood-color);
+  background: var(--mood-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.moodOption.selected .moodLabel,
+.moodOption.selected .moodDescription {
+  color: white;
+}
+
+.moodEmoji {
+  font-size: 28px;
+}
+
+.moodLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.moodDescription {
+  font-size: 10px;
+  color: #777;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.currentMood {
+  text-align: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f3e5f5 100%);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+}
+
+.currentMood strong {
+  color: #2e7d32;
+}
+
+.submitMoodBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitMoodBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.35);
+}
+
+.submitMoodBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.moodMessage {
+  text-align: center;
+  margin-top: 14px;
+  padding: 10px 16px;
+  background: #e8f5e9;
+  border-radius: 8px;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #c8e6c9;
+}
